@@ -10,7 +10,16 @@
           <p class="form__list-item mb-small">{{ tech }}</p>
         </div>
       </div>
+      <div class="portfolio__preview-links">
+        <a :href="document.viewUrl" target="blank" class="fw-unset">
+          <button class="button button__contact">View Website</button>
+        </a>
+        <a :href="document.gitUrl" target="blank" class="fw-unset">
+          <button class="button button__contact ">View Code</button>
+        </a>
+      </div>
     </div>
+
     <div class="portfolio__preview-imageContainer">
       <img
         class="portfolio__preview-image"
@@ -24,7 +33,7 @@
 <script>
 export default {
   props: {
-    document,
+    document: Object,
   },
   setup() {
     return {};

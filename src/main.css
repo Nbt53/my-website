@@ -52,6 +52,10 @@ body {
   margin-bottom: 3rem;
 }
 
+.fw-unset {
+  font-weight: unset;
+}
+
 body {
   color: #1D3557;
 }
@@ -163,7 +167,6 @@ a {
 
 .button {
   display: flex;
-  background-color: #F1FAEE;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -312,6 +315,24 @@ a {
   padding: 0.5rem;
   border-radius: 0 1rem 0 1rem;
 }
+.form__contact .form {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+@media (max-width: 37.5em) {
+  .form__contact .form {
+    padding: 2rem;
+  }
+}
+.form__contact .form input,
+.form__contact .form textarea,
+.form__contact .form button {
+  margin-bottom: 4rem;
+}
+.form__contact-links {
+  display: flex;
+  margin: 0 auto;
+}
 
 .home {
   display: flex;
@@ -364,6 +385,8 @@ a {
 
 .about__image {
   width: 41.66%;
+  background-color: #A8DADC;
+  padding: 4rem;
 }
 .about__header {
   display: flex;
@@ -380,6 +403,27 @@ a {
 .about img {
   width: 100%;
   height: auto;
+}
+.about__content {
+  width: 100%;
+}
+.about__content-title {
+  height: 20rem;
+  min-width: 30rem;
+  max-width: 30rem;
+  padding: 2rem;
+}
+.about__content-text {
+  padding: 1rem 5rem;
+  margin-left: 2rem;
+}
+.about__content-text p {
+  margin-bottom: 2rem;
+}
+.about__content-section {
+  display: flex;
+  margin-bottom: 4rem;
+  width: 100%;
 }
 
 .portfolio__preview {
@@ -417,6 +461,11 @@ a {
 .portfolio__preview-tech {
   display: flex;
   flex-wrap: wrap;
+}
+.portfolio__preview-links {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
 }
 .portfolio__preview-image {
   display: block;
