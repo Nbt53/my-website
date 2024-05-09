@@ -2,7 +2,7 @@
   <div class="tech">
     <div class="tech__icons">
       <div v-for="icon in icons" :key="icon.id" class="tech__icon">
-        <div v-html="icon.SVG"></div>
+        <div v-html="icon.SVG" class="tech__icon-container"></div>
         <p>{{ icon.name }}</p>
       </div>
     </div>

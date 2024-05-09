@@ -13,8 +13,7 @@ export default {
     PortfolioPreview,
   },
   setup() {
-    const { error, documents: portfolios } = getCollection("portfolio");
-    console.log(portfolios);
+    const { error, documents: portfolios } = getCollection("portfolio", 'createdAt');
     return {
       portfolios,
       error,

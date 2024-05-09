@@ -4,11 +4,11 @@ import { db } from "@/firebase/config";
 
 
 
-const getCollection = (collectionName) => {
+const getCollection = (collectionName, order) => {
     const error = ref(null);
     const documents = ref(null);
     let collectionRef = collection(db, collectionName);
-    let queryRef = query(collectionRef, orderBy('title', 'asc'));
+    let queryRef = query(collectionRef, orderBy(order, 'desc'));
 
     const unSub = onSnapshot(queryRef, (snap) => {
         let results = [];

@@ -12,10 +12,10 @@
       </div>
       <div class="portfolio__preview-links">
         <a :href="document.viewUrl" target="blank" class="fw-unset">
-          <button class="button button__contact">View Website</button>
+          <button class="button button__portfolio">View Website</button>
         </a>
         <a :href="document.gitUrl" target="blank" class="fw-unset">
-          <button class="button button__contact ">View Code</button>
+          <button class="button button__portfolio ">View Code</button>
         </a>
       </div>
     </div>

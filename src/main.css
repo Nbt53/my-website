@@ -196,6 +196,12 @@ a {
   font-size: 5rem;
   line-height: 0;
 }
+.button__portfolio {
+  background-color: #F1FAEE;
+  color: #457B9D;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
 
 @media (max-width: 56.25em) {
   .button__contact {
@@ -223,21 +229,35 @@ a {
   width: 66.66%;
   margin: 0 auto;
 }
+@media (max-width: 37.5em) {
+  .tech__icons {
+    width: 83.33%;
+  }
+}
 .tech__icon {
   display: flex;
   flex-direction: column;
   width: 15%;
   padding: 2rem;
-  align-items: center;
 }
 @media (max-width: 37.5em) {
   .tech__icon {
-    width: 40%;
+    padding: unset;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
   }
+}
+.tech__icon-container {
+  width: 100%;
 }
 .tech__icon svg {
   width: 90%;
   margin-bottom: 1rem;
+}
+@media (max-width: 37.5em) {
+  .tech__icon svg {
+    width: 100%;
+  }
 }
 
 .form {
@@ -278,6 +298,11 @@ a {
 .form__portfolio {
   height: -moz-fit-content;
   height: fit-content;
+}
+@media (max-width: 37.5em) {
+  .form__portfolio {
+    padding: 2rem;
+  }
 }
 .form__portfolio input,
 .form__portfolio textArea {
@@ -334,6 +359,45 @@ a {
   margin: 0 auto;
 }
 
+.messages {
+  margin: 5rem 25%;
+  background-color: #9FBADF;
+  padding: 5rem 10rem;
+}
+@media (max-width: 56.25em) {
+  .messages {
+    padding: 5rem 2.5rem;
+    margin: 5rem 2rem;
+  }
+}
+.messages h2 {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.messages .name {
+  font-weight: bold;
+}
+.messages .email {
+  font-style: italic;
+}
+.messages .content {
+  margin-top: 10px;
+}
+.messages .read {
+  color: green;
+  margin-top: 2rem;
+}
+.messages .unread {
+  color: red;
+  margin-top: 2rem;
+}
+
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 2rem;
+}
+
 .home {
   display: flex;
   flex-direction: row;
@@ -388,11 +452,32 @@ a {
   background-color: #A8DADC;
   padding: 4rem;
 }
+@media (max-width: 56.25em) {
+  .about__image {
+    padding: unset;
+    width: 100%;
+    background-color: unset;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .about__image img {
+    width: 100%;
+  }
+}
 .about__header {
   display: flex;
   width: 83.33%;
   justify-content: space-around;
   margin: 5rem;
+}
+@media (max-width: 56.25em) {
+  .about__header {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 4rem 0;
+  }
 }
 .about__header-text {
   display: flex;
@@ -413,6 +498,14 @@ a {
   max-width: 30rem;
   padding: 2rem;
 }
+@media (max-width: 56.25em) {
+  .about__content-title {
+    height: unset;
+    min-width: unset;
+    max-width: unset;
+    padding: 2.5rem;
+  }
+}
 .about__content-text {
   padding: 1rem 5rem;
   margin-left: 2rem;
@@ -424,6 +517,11 @@ a {
   display: flex;
   margin-bottom: 4rem;
   width: 100%;
+}
+@media (max-width: 56.25em) {
+  .about__content-section {
+    flex-direction: column;
+  }
 }
 
 .portfolio__preview {

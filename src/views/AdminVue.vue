@@ -16,6 +16,7 @@
       </form>
 
       <CreatePortfolio />
+      <MessageRender />
     </div>
   </div>
 </template>
@@ -26,9 +27,11 @@ import useLogout from "@/composables/useLogout";
 import getUser from "@/composables/getUser";
 import { ref } from "vue";
 import CreatePortfolio from "@/components/CreatePortfolio.vue";
+import MessageRender from "@/components/MessageRender.vue";
 export default {
   components: {
     CreatePortfolio,
+    MessageRender,
   },
   setup() {
     const email = ref("");
