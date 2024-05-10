@@ -4,6 +4,7 @@ import AboutView from '../views/AboutView.vue'
 import PortfolioView from '../views/PortfolioView.vue'
 import ContactView from '../views/ContactView.vue'
 import AdminVue from '../views/AdminVue.vue'
+import CrossesGame from '../views/CrossesGame.vue'
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/portfolio/admin',
     name: 'admin',
     component: AdminVue
+  },
+  {
+    path: '/crosses',
+    name: 'crosses',
+    component: CrossesGame
   }
 ]
 
