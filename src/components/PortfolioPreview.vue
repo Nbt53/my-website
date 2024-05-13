@@ -2,6 +2,7 @@
   <div class="portfolio__preview">
     <div class="portfolio__preview-content">
       <h2 class="mb-medium portfolio__preview-title">{{ document.title }}</h2>
+      <h3>{{ document.category }}</h3>
       <p class="portfolio__preview-description">
         {{ document.description[0] }}
       </p>
@@ -15,7 +16,7 @@
           <button class="button button__portfolio">View Website</button>
         </a>
         <a :href="document.gitUrl" target="blank" class="fw-unset">
-          <button class="button button__portfolio ">View Code</button>
+          <button class="button button__portfolio">View Code</button>
         </a>
       </div>
     </div>

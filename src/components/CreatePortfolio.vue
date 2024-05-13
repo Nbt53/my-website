@@ -8,6 +8,7 @@
       </textarea>
       <input type="text" placeholder="Slug" v-model="slug" />
       <p class="error" v-if="slugError">{{ slugError }}</p>
+      <input type="text" placeholder="Category" v-model="category" />
       <input type="text" placeholder="Website Url" v-model="viewUrl" />
       <input type="text" placeholder="Git Url" v-model="gitUrl" />
       <input
@@ -26,7 +27,9 @@
         </div>
       </div>
       <div class="">
-        <label for="image"><p>Upload Photos</p></label>
+        <label for="image">
+          <p>Upload Photos</p>
+        </label>
         <input
           type="file"
           name="image"
@@ -43,6 +46,10 @@
         >
           <img :src="url" alt="" @click="removeUrl" />
         </div>
+      </div>
+      <div class="div">
+        <p><span>completed?</span></p>
+        <input type="checkbox" v-model="completed" />
       </div>
       <div v-if="error || portfolioError">
         <p class="error" v-if="error">error: {{ error }}</p>
@@ -73,6 +80,8 @@ export default {
     const gitUrl = ref("");
     const technology = ref("");
     const technologies = ref([]);
+    const category = ref("");
+    const completed = ref(false);
     const { ListAdd } = useListAdd();
     const { ListRemove } = useListRemove();
     const { UploadPortfolio, portfolioError } = UseUploadPortfolio();
@@ -123,7 +132,9 @@ export default {
         description: description.value,
         slug: slug.value,
         images: imageUrls.value,
+        completed: completed.value,
         viewUrl: viewUrl.value,
+        category: category.value,
         gitUrl: gitUrl.value,
         technologies: technologies.value,
         createdAt: timestamp(),
@@ -137,6 +148,8 @@ export default {
       title,
       description,
       slug,
+      category,
+      completed,
       viewUrl,
       gitUrl,
       images,

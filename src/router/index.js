@@ -4,7 +4,10 @@ import AboutView from '../views/AboutView.vue'
 import PortfolioView from '../views/PortfolioView.vue'
 import ContactView from '../views/ContactView.vue'
 import AdminVue from '../views/AdminVue.vue'
-import CrossesGame from '../views/CrossesGame.vue'
+import CrossesGame from '../views/portfolioItems/CrossesGame.vue'
+import TodoList from '../views/portfolioItems/TodoList.vue'
+import PollComponent from '../views/portfolioItems/PollComponent.vue'
+
 
 const routes = [
   {
@@ -36,6 +39,16 @@ const routes = [
     path: '/crosses',
     name: 'crosses',
     component: CrossesGame
+  },
+  {
+    path: '/todo',
+    name: 'todo',
+    component: TodoList
+  },
+  {
+    path: '/poll',
+    name: 'poll',
+    component: PollComponent
   }
 ]
 

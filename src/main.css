@@ -138,7 +138,9 @@ a {
 }
 
 .nav {
+  position: relative;
   width: 100%;
+  z-index: 1000;
 }
 .nav__container {
   display: flex;
@@ -200,6 +202,7 @@ a {
   background-color: #F1FAEE;
   color: #457B9D;
   padding: 1rem 2rem;
+  margin: 4rem 2rem;
   border-radius: 10px;
 }
 
@@ -310,6 +313,9 @@ a {
 }
 .form__portfolio p {
   display: inline-block;
+}
+.form__portfolio span {
+  margin: 0 2rem;
 }
 .form__thumbnails {
   width: 100%;
@@ -558,11 +564,12 @@ a {
 }
 .portfolio__preview-tech {
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 .portfolio__preview-links {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 2rem;
 }
 .portfolio__preview-image {
@@ -670,4 +677,141 @@ a {
 }
 .crosses__board-char {
   font-size: 8rem;
+}
+
+.todo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-color: #302622;
+  padding: 10rem 5rem;
+}
+@media (max-width: 56.25em) {
+  .todo {
+    padding: 10rem 2rem;
+  }
+}
+.todo .header {
+  color: #334368;
+  font-family: "Merienda", cursive;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.todo .body {
+  color: #334368;
+  font-family: "Caveat", cursive;
+}
+.todo__book {
+  position: relative;
+  z-index: 2000;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 56.25em) {
+  .todo__book {
+    flex-direction: column;
+  }
+}
+.todo__page {
+  background-color: #ecedf0;
+  padding: 2rem;
+  border-radius: 20px 0 0 20px;
+  margin-left: 1rem;
+  height: 100%;
+  width: 50%;
+  overflow: auto;
+}
+.todo__page:not(:first-child) {
+  border-radius: 0 20px 20px 0;
+}
+@media (max-width: 56.25em) {
+  .todo__page {
+    width: 100%;
+    border-radius: 20px;
+    margin: unset;
+  }
+  .todo__page:not(:first-child) {
+    border-radius: 20px;
+    margin-top: 2rem;
+  }
+}
+.todo .form__todo {
+  display: flex;
+  flex-direction: column;
+}
+.todo .form__todo input,
+.todo .form__todo textarea,
+.todo .form__todo option,
+.todo .form__todo select {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  background-color: white;
+}
+.todo .form__todo-div {
+  display: flex;
+  justify-content: space-between;
+}
+.todo .form__todo-div input {
+  width: 50%;
+}
+@media (max-width: 56.25em) {
+  .todo .form__todo-div {
+    flex-direction: column;
+  }
+  .todo .form__todo-div input {
+    width: 100%;
+  }
+}
+.todo__show-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+.todo__show-subContainer {
+  display: flex;
+  width: 100%;
+}
+.todo__show .header {
+  cursor: pointer;
+  text-transform: capitalize;
+  text-align: left;
+}
+.todo__show-importance {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-right: 2rem;
+}
+.todo__show-importance div {
+  width: 100%;
+  height: 100%;
+}
+.todo__show-icon {
+  margin: 0 2rem;
+}
+.todo__show-icon span {
+  font-size: 4rem;
+  margin-right: 2rem;
+}
+.todo__show-date {
+  margin: 0 2rem 0 auto;
+}
+.todo button {
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #334368;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
 }/*# sourceMappingURL=main.css.map */
