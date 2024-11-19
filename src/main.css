@@ -5,7 +5,7 @@
 }
 
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: "Merriweather", serif;
   font-size: 62.5%;
 }
 @media (max-width: 75em) {
@@ -61,7 +61,7 @@ body {
 }
 
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: "Merriweather", serif;
   font-size: 1.8rem;
   font-weight: 500;
 }
@@ -76,7 +76,7 @@ h6 {
 }
 
 h1 {
-  font-size: 8.8rem;
+  font-size: 8rem;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -160,6 +160,7 @@ a {
   margin-right: 2rem;
 }
 .nav__link {
+  font-family: "Montserrat", sans-serif;
   font-size: 2rem;
   color: #F1FAEE;
 }
@@ -404,6 +405,23 @@ a {
   margin-bottom: 2rem;
 }
 
+.widget {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 200px;
+  margin: 10px;
+  background-color: #9FBADF;
+  border: 3px solid #1D3557;
+  border-radius: 20px;
+}
+@media (max-width: 37.5em) {
+  .widget {
+    width: 90%;
+  }
+}
+
 .home {
   display: flex;
   flex-direction: row;
@@ -418,8 +436,9 @@ a {
   }
 }
 .home__header {
-  width: 66.66%;
-  padding: 4rem;
+  width: 83.33%;
+  padding: 5rem;
+  background-color: rgba(238, 238, 238, 0.8);
 }
 @media (max-width: 56.25em) {
   .home__header {
@@ -436,13 +455,17 @@ a {
 }
 .home__header h3 {
   text-transform: none;
+  width: 50%;
 }
 .home__contact {
-  width: 33.33%;
+  width: 48rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  background-color: #9FBADF;
+  border-radius: 100%;
+  transform: translateX(-50%);
 }
 @media (max-width: 56.25em) {
   .home__contact {
@@ -814,4 +837,57 @@ a {
   font-size: 1.5rem;
   cursor: pointer;
   margin-top: 1rem;
+}
+
+.poll {
+  margin: 5rem 10rem;
+}
+@media (max-width: 56.25em) {
+  .poll {
+    margin: 5rem 0;
+  }
+}
+.poll__section {
+  background-color: #9FBADF;
+  padding: 4rem 5rem;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+}
+@media (max-width: 56.25em) {
+  .poll__section {
+    padding: 4rem 2rem;
+    margin: 0 1rem;
+  }
+}
+.poll__option {
+  padding: 2rem 5rem;
+  background-color: #A8DADC;
+  margin-bottom: 2rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.poll__option-text {
+  text-transform: capitalize;
+}
+.poll__new-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.poll__form {
+  width: 100%;
+  height: unset;
+  margin: 4rem 0;
+}
+@media (max-width: 56.25em) {
+  .poll__form {
+    padding: 5rem 4rem;
+  }
+}
+.poll__form input {
+  margin-bottom: 2rem;
+}
+.poll__clickable {
+  font-size: 4rem;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

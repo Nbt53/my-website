@@ -7,6 +7,7 @@ import AdminVue from '../views/AdminVue.vue'
 import CrossesGame from '../views/portfolioItems/CrossesGame.vue'
 import TodoList from '../views/portfolioItems/TodoList.vue'
 import PollComponent from '../views/portfolioItems/PollComponent.vue'
+import StartPage from '@/views/portfolioItems/StartPage.vue'
 
 
 const routes = [
@@ -49,6 +50,16 @@ const routes = [
     path: '/poll',
     name: 'poll',
     component: PollComponent
+  },
+  {
+    path: '/startPage',
+    name: 'startPage',
+    component: StartPage
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: '/'
+  
   }
 ]
 
